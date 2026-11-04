@@ -48,7 +48,7 @@ table {
 	border-spacing: 0;
 }
 /* ********************************************
-                  Main Styles
+                  MAIN STYLES
 *********************************************** */
 
 html {
@@ -67,12 +67,65 @@ html {
 
 h1 {
 font-size: 30px;
-color:blueviolet;
-background-color: chartreuse;
+color:darkblue;
+background-color: cornsilk;
 
 /* margin space outside the element- pushes other elements away */
 margin-bottom: 20px;
 
 /* padding- space inside element- pushes the element away from the edge */
 padding: 10px;
+}
+/* ********************************************
+                  MOBILE STYLES
+*********************************************** */
+
+/* target the a tags on nav */
+
+nav a {
+    /* make them block elements, so we can style them like buttons */
+    display: block;
+    background-color: lightgoldenrodyellow;
+    padding: 10px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+
+    /* ceentre text */
+    text-align: center;
+
+    /* removes underline */
+    text-decoration: none;
+
+}
+nav a:hover, nav a:active{
+    background-color:white  ;
+}
+
+/* ********************************************
+                  MEDIA QUERIES
+*********************************************** */
+
+@media screen and (min-width:640px){
+/* any style inside this media query will only apply if the screen/ browser is 640px or wider*/
+
+    nav a {
+
+        float:left;
+        width: 25%;
+        box-sizing: border-box;
+    }
+    
+    /* make sure content goes bellow the floated */
+    main{
+        clear:both
+    }
+}
+
+/* order matters-smaller first */
+
+@media screen and (min-width:800px){
+    nav a {
+        background-color: lime;
+    }
+    
 }
